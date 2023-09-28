@@ -15,13 +15,12 @@ public class SpringRestClient {
 
     public static void main(String[] args) {
         User newUser = User.builder().id(3L).name("James").lastName("Brown").age((byte) 3).build();
-        User updatedUser = User.builder().id(3L).name("Thomas").lastName("Shelby").age((byte) 3).build();
-        User deleteUser = User.builder().id(3L).name("Thomas").lastName("Shelby").age((byte) 3).build();
+        User user = User.builder().id(3L).name("Thomas").lastName("Shelby").age((byte) 3).build();
 
         SpringRestClient.getAll();
         SpringRestClient.create(newUser);
-        SpringRestClient.update(updatedUser);
-        SpringRestClient.delete(deleteUser);
+        SpringRestClient.update(user);
+        SpringRestClient.delete(user);
     }
 
     public static void getAll() {
